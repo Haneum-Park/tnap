@@ -1,0 +1,112 @@
+{
+  "name": "tistory_sync_naver_posting",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.20.0",
+    "binary-extensions": "^2.1.0",
+    "crypto": "^1.0.1",
+    "electron-debug": "^3.1.0",
+    "electron-is-dev": "^1.2.0",
+    "electron-json-storage": "^4.2.0",
+    "electron-store": "^6.0.1",
+    "electron-updater": "^4.3.5",
+    "electron-winstaller": "^4.0.1",
+    "jquery": "^3.5.1",
+    "jsdom": "^16.4.0",
+    "lodash": "^4.17.20",
+    "platform": "^1.3.6",
+    "pm2": "^4.5.0",
+    "react": "^16.13.1",
+    "react-datepicker": "^3.3.0",
+    "react-dom": "^16.13.1",
+    "react-google-charts": "^3.0.15",
+    "react-redux": "^7.2.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.3",
+    "readdirp": "^3.5.0",
+    "redux": "^4.0.5",
+    "squirrel": "^1.0.0",
+    "update-electron-app": "^2.0.1",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "main": "public/electron.js",
+  "author": "Captain Electron",
+  "homepage": "./",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "electron-major": "npm version major --no-git-tag-version;yarn electron-publish",
+    "electron-minor": "npm version minor --no-git-tag-version;yarn electron-publish",
+    "electron-patch": "npm version patch --no-git-tag-version;yarn electron-publish",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "electron-start": "electron .",
+    "electron-dev": "concurrently \"cross-env BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron-pack": "electron-builder",
+    "electron-pack:win32": "electron-builder --win --ia32 ",
+    "preelectron-pack": "yarn build",
+    "preelectron-pack:win32": "yarn build"
+  },
+  "eslintConfig": {
+    "extends": "react-app",
+    "rules": {
+      "import/no-webpack-loader-syntax": 0
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "build": {
+    "appId": "com.caramella.bpb",
+    "artifactName": "bpb.${ext}",
+    "mac": {
+      "icon": "build/assets/icons/icon.icns",
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "icon": "build/assets/icons/icon.ico",
+      "publish": [
+        "github"
+      ],
+      "target": "nsis"
+    },
+    "files": [
+      "build/**/*",
+      "node_modules/**/*",
+      "ext_modules/**/*",
+      "public/assets/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.0",
+    "@babel/preset-env": "^7.12.0",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-root-import": "^6.5.0",
+    "concurrently": "^5.3.0",
+    "cross-env": "^7.0.2",
+    "electron": "^10.1.3",
+    "electron-builder": "^22.9.1",
+    "svg-react-loader": "^0.4.6",
+    "wait-on": "^5.2.0"
+  }
+}

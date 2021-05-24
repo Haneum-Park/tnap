@@ -1,0 +1,30 @@
+{
+    "editor.fontFamily": "D2Coding",
+    "editor.tabSize": 2,
+    "editor.wordWrapColumn": 100,
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "javascript.format.insertSpaceAfterCommaDelimiter": false,
+    "javascript.autoClosingTags": false,
+    "javascript.format.enable": false,
+    "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+    "javascript.format.insertSpaceAfterKeywordsInControlFlowStatements": false,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+    "javascript.format.insertSpaceAfterSemicolonInForStatements": false,
+    "javascript.format.insertSpaceBeforeAndAfterBinaryOperators": false,
+    "html.format.endWithNewline": true,
+    "typescript.format.enable": false,
+    "typescript.format.insertSpaceAfterCommaDelimiter": false,
+    "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+    "typescript.format.insertSpaceAfterKeywordsInControlFlowStatements": false,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+    "typescript.format.insertSpaceAfterSemicolonInForStatements": false,
+    "typescript.format.insertSpaceBeforeAndAfterBinaryOperators": false,
+    "[javascript]": {
+        "editor.formatOnSave": false,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": false,
+            "javascript.format.enable": false
+        }
+    },
+    "editor.formatOnSave": false,
+}

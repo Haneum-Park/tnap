@@ -1,0 +1,27 @@
+/* Headers */
+nav { width: 100%; margin: 0; overflow: hidden; background: #20204f; }
+
+.nav-content { max-width: 1024px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; }
+.nav-content a, .nav-content .deleteBtn { display: block; font-size: 14px; line-height: 44px; text-decoration: none; transition: all 0.3s; color: #ffffff; }
+.nav-content a:hover, .nav-icon:hover, .search-icon:hover, .nav-content .deleteBtn:hover { opacity: 0.7; }
+
+.nav-links { width: 80%; display: flex; flex-direction: row; justify-content: space-between; }
+
+.nav-icon { display: none; grid-gap: 5px; grid-template-columns: auto; padding: 17px 0; height: 10px; cursor: pointer; transition: all 0.3s; }
+
+.bar { height: 1px; width: 18px; background: white; transition: 0.5s; }
+.show .one { transform: rotate(45deg) translateY(5.5px); }
+.show .two { transform: rotate(-45deg) translateY(-5.5px); }
+
+@media (max-width: 768px) {
+  .nav-links { position: fixed; top: 44px; right: 0; height: 0; width: 100%; background: #20204f; flex-direction: column; justify-content: flex-start; transition: all 2s cubic-bezier(0.19, 1, 0.22, 1); z-index: 2; }
+  .show .nav-links { height: 100%; }
+  .nav-links a, .nav-links .deleteBtn { height: 0; width: 0; opacity: 0; overflow: hidden; margin-right: 50px; margin-left: 50px; transition: opacity 1.5s, height 2s; }
+  .show .nav-links a, .show .nav-links .deleteBtn { opacity: 1; width: auto; height: auto; }
+  .nav-icon { order: 1; display: grid; }
+  .logo { order: 2; }
+  .search-icon { order: 3; }
+}
+
+.deleteBtn { background-color: unset; border: unset; cursor: pointer; }
+.deleteBtn:hover, .deleteBtn:active, .deleteBtn:focus { outline: none !important; }

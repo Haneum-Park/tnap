@@ -1,0 +1,25 @@
+.reports_wrap { width: 100%; max-width: 810px; padding: 5px; }
+.reports_wrap > div { display: block; }
+.wrap_body,
+.wrap_body > div { width: 100%; }
+
+.reports_info_btn { width: 100%; max-width: 140px; }
+
+
+/* react-datepicker */
+.react-datepicker,
+.react-datepicker-popper,
+.react-datepicker__header,
+.react-datepicker__week,
+.react-datepicker__triangle,
+.react-datepicker__current-month,
+.react-datepicker-time__header,
+.react-datepicker-year-header,
+.react-datepicker__header__dropdown,
+.react-datepicker__header__dropdown--select,
+.react-datepicker__day-names,
+.react-datepicker__month,
+.react-datepicker__month-container { display: block; }
+
+.date_wrap { position: relative; }
+.date_output { position: absolute; top: 50%; left: 30%; transform: translate(-50%, -50%); z-index: 2; }
